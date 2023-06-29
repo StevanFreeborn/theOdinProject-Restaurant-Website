@@ -1,0 +1,17 @@
+{
+  "name": "theodinproject-restaurant-website",
+  "version": "1.0.0",
+  "description": "A simple website for a restaurant built as part of The Odin Project curriculumn.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
+  },
+  "author": "Stevan Freeborn",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
