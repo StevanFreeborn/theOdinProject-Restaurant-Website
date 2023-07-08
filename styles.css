@@ -1,0 +1,60 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.site-logo {
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-item-button {
+  background-color: inherit;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.nav-item-button:hover {
+  color: rgb(62, 104, 146);
+}
