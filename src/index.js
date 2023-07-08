@@ -1,1 +1,5 @@
-console.log('here');
+import { initialize } from './main.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initialize();
+});
