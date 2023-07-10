@@ -9,11 +9,13 @@
 }
 
 html,
-body {
+body,
+#content {
   height: 100%
 }
 
-body {
+body,
+#content {
   display: flex;
   flex-direction: column;
 }
@@ -56,5 +58,40 @@ body {
 }
 
 .nav-item-button:hover {
-  color: rgb(62, 104, 146);
+  color: #3e6892;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.github-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.github-link:hover {
+  color: #3e6892;
+}
+
+.github-image {
+  width: 35px;
+  aspect-ratio: 1;
+}
+
+.github-username {
+  font-size: 1.25rem;
 }
