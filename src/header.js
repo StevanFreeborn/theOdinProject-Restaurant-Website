@@ -1,3 +1,13 @@
+import { createContact } from './contact.js';
+import { createHome } from './home.js';
+import { createMenu } from './menu.js';
+
+const tabs = {
+  HOME: 'home',
+  CONTACT: 'contact',
+  MENU: 'menu',
+};
+
 function createSiteLogo() {
   const siteLogo = document.createElement('img');
   siteLogo.src = 'assets/logo.png';
@@ -12,14 +22,38 @@ function createSiteTitle() {
   return siteTitle;
 }
 
+function renderTabContent(tab) {
+  const mainElement = document.getElementById('main');
+  mainElement.innerHTML = '';
+
+  let tabContent = document.createElement('div');
+
+  switch (tab) {
+    case tabs.HOME:
+      tabContent = createHome();
+      break;
+    case tabs.CONTACT:
+      tabContent = createContact();
+      break;
+    case tabs.MENU:
+      tabContent = createMenu();
+      break;
+    default:
+      break;
+  }
+
+  mainElement.append(tabContent);
+}
+
 function createNavList() {
-  const navItems = ['home', 'contact', 'menu'];
+  const navItems = Object.values(tabs);
   const navListElement = document.createElement('ul');
   navItems.forEach(navItem => {
     const navItemButton = document.createElement('button');
     navItemButton.textContent = navItem;
     navItemButton.id = navItem;
     navItemButton.classList.add('nav-item-button');
+    navItemButton.onclick = () => renderTabContent(navItem);
 
     const navItemElement = document.createElement('li');
     navItemElement.append(navItemButton);
